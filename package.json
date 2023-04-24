@@ -1,0 +1,44 @@
+{
+  "name": "vuetify-project",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --fix --ignore-path .gitignore"
+  },
+  "dependencies": {
+    "@mdi/font": "^7.2.96",
+    "@vueuse/core": "^10.1.0",
+    "apexcharts": "^3.39.0",
+    "crypto-js": "^4.1.1",
+    "echarts": "^5.4.2",
+    "moment": "^2.29.4",
+    "pinia": "^2.0.35",
+    "pinia-sf-storage": "^1.0.6",
+    "roboto-fontface": "^0.10.0",
+    "vue": "^3.2.47",
+    "vue-i18n": "^9.2.2",
+    "vue-router": "^4.1.6",
+    "vuetify": "^3.1.15",
+    "webfontloader": "^1.6.28"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^6.4.0",
+    "@types/crypto-js": "^4.1.1",
+    "@types/node": "^18.15.13",
+    "@types/webfontloader": "^1.6.35",
+    "@vitejs/plugin-vue": "^4.1.0",
+    "@vue/eslint-config-typescript": "^11.0.2",
+    "eslint": "^8.39.0",
+    "eslint-plugin-vue": "^9.11.0",
+    "sass": "^1.62.0",
+    "typescript": "^5.0.4",
+    "unplugin-auto-import": "^0.15.3",
+    "unplugin-vue-components": "^0.24.1",
+    "vite": "^4.3.1",
+    "vite-plugin-vuetify": "^1.0.2",
+    "vue-tsc": "^1.4.2"
+  }
+}

@@ -1,0 +1,8 @@
+@use "vuetify" with (
+  $utilities: false,
+  $color-pack: false,
+);
+@import "./variables";
+@import "vuetify/styles";
+@import "./override";
+@import "./common/beautiful.scss";
