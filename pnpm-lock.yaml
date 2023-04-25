@@ -37,6 +37,9 @@ dependencies:
   vue-router:
     specifier: ^4.1.6
     version: registry.npmmirror.com/vue-router@4.1.6(vue@3.2.47)
+  vue3-lottie:
+    specifier: ^2.5.0
+    version: 2.5.0(vue@3.2.47)
   vuetify:
     specifier: ^3.1.15
     version: registry.npmmirror.com/vuetify@3.1.15(vite-plugin-vuetify@1.0.2)(vue-i18n@9.2.2)(vue@3.2.47)
@@ -280,6 +283,14 @@ packages:
     requiresBuild: true
     optional: true
 
+  /lodash-es@4.17.21:
+    resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
+    dev: false
+
+  /lottie-web@5.11.0:
+    resolution: {integrity: sha512-9vSt0AtdOH98GKDXwD5LPfFg9Pcmxt5+1BllAbudKM5iqPxpJnJUfuGaP45OyudDrESCOBgsjnntVUTygBNlzw==}
+    dev: false
+
   /pinia-sf-storage@1.0.6(typescript@5.0.4)(vue@3.2.47):
     resolution: {integrity: sha512-4CCurCbFb26+O/n2UgPXHYWQh4k6VurWS+LLx13IKBKM8H1i/JC2FMmk8nTCrEk5s3debl4tn7rWnKGp30GQVQ==}
     dependencies:
@@ -320,6 +331,17 @@ packages:
       '@vue/composition-api':
         optional: true
     dependencies:
+      vue: registry.npmmirror.com/vue@3.2.47
+    dev: false
+
+  /vue3-lottie@2.5.0(vue@3.2.47):
+    resolution: {integrity: sha512-JwlTzykr4ofPnSXsTAPt571RDrtQNy66H8w/zYBVHNgrCRG4RINI30c/oJx3Dj+XpxuktpKzgfI08tv1FjYkAQ==}
+    engines: {node: '>=12'}
+    peerDependencies:
+      vue: ^3.2
+    dependencies:
+      lodash-es: 4.17.21
+      lottie-web: 5.11.0
       vue: registry.npmmirror.com/vue@3.2.47
     dev: false
 

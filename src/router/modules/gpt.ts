@@ -8,7 +8,7 @@ const gpt: Router.RouterCustomRaw = {
   },
   children: [
     {
-      path: "/gpt/chatGpt",
+      path: "chatGpt",
       name: "chatGpt",
       component: "self",
       meta: {
@@ -17,7 +17,7 @@ const gpt: Router.RouterCustomRaw = {
       },
     },
     {
-      path: "/gpt/chatStream",
+      path: "chatStream",
       name: "chatStream",
       component: "self",
       meta: {

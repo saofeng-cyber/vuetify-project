@@ -1,23 +1,9 @@
 <script setup lang="ts">
-import routeList from "@/router/modules";
+import { routeListItem } from "@/config/routeList";
 import { appStore } from "@/store/app/app";
 const useApp = appStore();
 const { drawerOpen } = storeToRefs(useApp);
-const routeVList = routeList.map((item: Router.RouterCustomRaw) => {
-  return {
-    title: item.meta?.title,
-    icon: item.meta?.icon,
-    link: item.path,
-    children: item.children?.map((_item: Router.RouterCustomRaw) => {
-      return {
-        title: _item.meta?.title,
-        icon: _item.meta?.icon,
-        link: _item.path,
-      };
-    }),
-  };
-});
-console.log(routeVList);
+console.log(routeListItem);
 </script>
 <template>
   <v-navigation-drawer v-model="drawerOpen" elevation="2">
@@ -32,7 +18,7 @@ console.log(routeVList);
     <v-divider></v-divider>
 
     <v-list nav color="primary">
-      <template v-for="(item, index) in routeVList" ::key="index">
+      <template v-for="item in routeListItem" ::key="item.title">
         <v-list-subheader>{{ item.title }}</v-list-subheader>
         <v-list-item
           nav
@@ -41,7 +27,6 @@ console.log(routeVList);
           :to="child.link"
           :prepend-icon="child.icon"
           :title="child.title"
-          density="compact"
         />
       </template>
     </v-list>

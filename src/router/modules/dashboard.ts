@@ -1,18 +1,18 @@
 const dashboard: Router.RouterCustomRaw = {
-  path: "/",
-  name: "home",
+  path: "/dashboard",
+  name: "dashboard",
   component: "basic",
-  redirect: "/dashboard",
+  redirect: "/dashboard/workbench",
   meta: {
     title: "DashBoard"
   },
   children: [
     {
-      path: "/dashboard",
-      name: "dashboard",
+      path: "workbench",
+      name: "workbench",
       component: "self",
       meta: {
-        title: "dashboard",
+        title: "workbench",
         icon: "mdi-view-dashboard-outline",
       },
     },

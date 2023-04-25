@@ -63,9 +63,12 @@ export default createVuetify({
   },
   defaults: {
     VCard: {
-      "elevation": 0,
-      "border": false,
-      "rounded": "xl"
+      elevation: 0,
+      border: false,
+      rounded: "xl",
+    },
+    VTextField: {
+      variant: "solo",
     },
   },
 });

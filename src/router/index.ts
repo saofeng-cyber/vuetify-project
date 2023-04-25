@@ -1,12 +1,12 @@
 // Composables
-import { RouteRecordRaw, createRouter, createWebHistory } from "vue-router";
+import { RouteRecordRaw, createRouter, createWebHashHistory } from "vue-router";
 import routeList from "@/router/modules";
 import { generateRoute } from "@/utils/convertRoute";
-const routes: RouteRecordRaw[] = [...generateRoute(routeList)];
-console.log(routes);
+import { baseRoute } from "./base";
+const routes: RouteRecordRaw[] = [...baseRoute, ...generateRoute(routeList)];
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHashHistory(import.meta.env.BASE_URL),
   routes,
 });
-
+console.log(routes);
 export default router;

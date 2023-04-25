@@ -10,10 +10,12 @@ watch(
       {
         title: matched[0].meta?.title,
         disable: false,
-        href: matched[0].path,
+        // href: matched[0].path,
       },
       {
-        title: matched[1].meta?.title
+        title: matched[1].meta?.title,
+        disable: true,
+        // href: matched[1].path,
       }
     ];
   },
