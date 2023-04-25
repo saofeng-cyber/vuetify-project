@@ -4,7 +4,7 @@ const dashboard: Router.RouterCustomRaw = {
   component: "basic",
   redirect: "/dashboard/workbench",
   meta: {
-    title: "DashBoard"
+    title: "DashBoard",
   },
   children: [
     {

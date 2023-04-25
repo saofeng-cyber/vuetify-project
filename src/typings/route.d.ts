@@ -1,7 +1,9 @@
 declare namespace Router {
   interface Actions {
     basic: () => void;
-    self: (key: RouterKey.RouterName) => void;
+    self: () => void;
+    multi: () => void;
+    blank: () => void;
   }
   /**
    * 路由组件

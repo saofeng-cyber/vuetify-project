@@ -9,7 +9,7 @@ import Breadcrumb from './Breadcrumb.vue';
         <!-- 添加路由过渡动画 -->
         <v-slide-x-transition mode="out-in">
           <keep-alive>
-            <component :is="Component"></component>
+            <component :is="Component" />
           </keep-alive>
         </v-slide-x-transition>
       </router-view>

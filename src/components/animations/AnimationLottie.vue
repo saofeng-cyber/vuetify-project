@@ -13,5 +13,9 @@ withDefaults(defineProps<Prop>(), {
 });
 </script>
 <template>
-  <Vue3Lottie :animationLink="animationLink" :height="height" :width="width" />
+  <Vue3Lottie
+    :animation-link="animationLink"
+    :height="height"
+    :width="width"
+  />
 </template>

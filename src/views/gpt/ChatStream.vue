@@ -48,15 +48,15 @@ const openSetting = () => {
                   elevation="3"
                 >
                   <v-card-text>
-                    <b> {{ message.content }}</b></v-card-text
-                  >
+                    <b> {{ message.content }}</b>
+                  </v-card-text>
                 </v-card>
                 <v-avatar
                   class="ml-4"
                   size="52"
                   variant="elevated"
                   image="https://img2.baidu.com/it/u=2587015716,2690889386&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500"
-                ></v-avatar>
+                />
               </div>
             </div>
             <div v-else class="d-flex flex-row align-center pa-6">
@@ -65,12 +65,11 @@ const openSetting = () => {
                 size="52"
                 image="https://img0.baidu.com/it/u=238452792,1045557508&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500"
                 variant="elevated"
-              >
-              </v-avatar>
+              />
               <v-card rounded="sm" elevation="3">
                 <v-card-text>
-                  <b> {{ message.content }}</b></v-card-text
-                >
+                  <b> {{ message.content }}</b>
+                </v-card-text>
               </v-card>
             </div>
           </template>
@@ -87,34 +86,33 @@ const openSetting = () => {
             "
           >
             <h1 class="text-h3 font-weight-bold text-deep-purple-darken-2">
-              Ask Me Any Things
+              Ask Me Any
             </h1>
             <AnimationLottie
-              animationLink="https://assets6.lottiefiles.com/packages/lf20_ofa3xwo7.json"
-              :width="400"
-              :height="400"
-            /></div
-        ></v-fab-transition>
+              animation-link="https://assets6.lottiefiles.com/packages/lf20_ofa3xwo7.json"
+              :width="320"
+              :height="320"
+            />
+          </div>
+        </v-fab-transition>
 
         <v-card-actions>
           <v-sheet elevation="0" width="100%" class="my-2">
             <v-text-field
               ref="input"
               v-model="message"
+              variant="solo"
+              active
               placeholder="输入你要发送的消息"
               hide-details
               color="primary"
               @keyup.enter="sendMessage"
             >
-              <!-- <template #prepend-inner>
-                <v-icon>mdi-microphone</v-icon>
-              </template> -->
-
               <template #append-inner>
-                <v-icon @click="sendMessage">mdi-send</v-icon>
+                <v-icon @click="sendMessage"> mdi-send </v-icon>
               </template>
               <template #append>
-                <v-icon size="32" @click="openSetting">mdi-cogs</v-icon>
+                <v-icon size="32" @click="openSetting"> mdi-cogs </v-icon>
               </template>
             </v-text-field>
           </v-sheet>

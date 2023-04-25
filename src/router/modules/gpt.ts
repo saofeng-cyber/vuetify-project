@@ -4,7 +4,7 @@ const gpt: Router.RouterCustomRaw = {
   component: "basic",
   redirect: "/gpt/chatGpt",
   meta: {
-    title: "ChatAi"
+    title: "ChatAi",
   },
   children: [
     {

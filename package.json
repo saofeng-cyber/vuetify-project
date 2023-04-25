@@ -40,9 +40,7 @@
     "@vue/eslint-config-typescript": "^11.0.2",
     "commitizen": "^4.3.0",
     "commitlint": "^17.6.1",
-    "commitlint-config-gitmoji": "^2.3.1",
     "cz-customizable": "^7.0.0",
-    "cz-emoji-conventional": "^1.0.1",
     "eslint": "^8.39.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
@@ -58,7 +56,7 @@
   },
   "config": {
     "commitizen": {
-      "path": "node_modules/cz-emoji-conventional"
+      "path": "node_modules/cz-customizable"
     }
   }
 }

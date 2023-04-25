@@ -1,6 +1,6 @@
-import { ss } from "pinia-sf-storage";
+import { ss } from "@saofeng_cyber/pinia-sf-persistence-storage";
 export type themeType = "light" | "dark";
-export const APP_KEY = "app"
+export const APP_KEY = "app";
 export interface AppState {
   theme: themeType;
   drawerOpen: boolean;

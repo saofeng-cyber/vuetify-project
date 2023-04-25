@@ -15,6 +15,6 @@ export const appStore = defineStore("app", {
   persist: {
     enable: true,
     key: APP_KEY,
-    isEncrypto: false,
+    storageType: "local",
   },
 });

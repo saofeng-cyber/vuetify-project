@@ -64,6 +64,9 @@ useEcharts(linechart, lineOptions);
 </script>
 
 <template>
-  <div ref="linechart" class="w-100 h-100" />
+  <div
+    ref="linechart"
+    class="w-100 h-100"
+  />
 </template>
 <style scoped lang="scss"></style>

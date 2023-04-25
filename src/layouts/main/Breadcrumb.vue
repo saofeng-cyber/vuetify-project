@@ -26,5 +26,8 @@ watch(
 );
 </script>
 <template>
-  <v-breadcrumbs :items="breadcrumbs" divider="/"></v-breadcrumbs>
+  <v-breadcrumbs
+    :items="breadcrumbs"
+    divider="/"
+  />
 </template>

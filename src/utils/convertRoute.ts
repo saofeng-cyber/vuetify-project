@@ -21,16 +21,21 @@ export const transformRouteRaw = (item: Router.RouterCustomRaw) => {
   const routeList: Array<RouteRecordRaw> = [];
   const itemRoute = { ...item } as RouteRecordRaw;
   if (hasComponent(item)) {
-    const actions: Router.Actions = {
-      basic: () => (itemRoute.component = DefaultVue),
-      self: () =>
-        (itemRoute.component = transformRouteKeyToPage(item.name as RouterKey.RouterName)),
+    const actions: Partial<Router.Actions> = {
+      basic: () => {
+        itemRoute.component = DefaultVue;
+      },
+      self: () => {
+        itemRoute.component = transformRouteKeyToPage(
+          item.name as RouterKey.RouterName
+        );
+      },
     };
-    actions[item.component as Router.RouteComponentType]();
+    actions[item.component as Router.RouteComponentType]!();
   }
   if (hasChildren(item)) {
-    const children = item.children!.map(item => transformRouteRaw(item))
-    itemRoute.children = children.flat(1)
+    const children = item.children!.map((item) => transformRouteRaw(item));
+    itemRoute.children = children.flat(1);
   }
   routeList.push(itemRoute);
   return routeList;

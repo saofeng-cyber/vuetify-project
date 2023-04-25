@@ -33,25 +33,52 @@ const items = ref([
     <v-col cols="12">
       <ScaleCard />
     </v-col>
-    <v-col cols="12" md="6">
-      <v-card variant="text" class="pa-2">
+    <v-col
+      cols="12"
+      md="6"
+    >
+      <v-card
+        variant="text"
+        class="pa-2"
+      >
         <v-card>
-          <v-card-title class="text-h5" style="font-weight: bold">
+          <v-card-title
+            class="text-h5"
+            style="font-weight: bold"
+          >
             Team Members
           </v-card-title>
-          <v-list :items="items" item-props lines="three">
-            <template v-slot:subtitle="{ subtitle }">
+          <v-list
+            :items="items"
+            item-props
+            lines="three"
+          >
+            <template #subtitle="{ subtitle }">
               <div class="d-flex justify-space-between align-center pa-1">
-                <div class="mr-3" v-html="subtitle"></div>
-                <v-btn variant="outlined" color="gray">add</v-btn>
+                <div
+                  class="mr-3"
+                  v-html="subtitle"
+                />
+                <v-btn
+                  variant="outlined"
+                  color="gray"
+                >
+                  add
+                </v-btn>
               </div>
             </template>
           </v-list>
         </v-card>
       </v-card>
     </v-col>
-    <v-col cols="12" md="6">
-      <v-card variant="text" class="pa-2">
+    <v-col
+      cols="12"
+      md="6"
+    >
+      <v-card
+        variant="text"
+        class="pa-2"
+      >
         <v-card>
           <v-carousel
             cycle
@@ -64,17 +91,17 @@ const items = ref([
             <v-carousel-item
               src="https://demos.creative-tim.com/vue-argon-dashboard-pro/img/img-2.2db028e3.jpg"
               cover
-            ></v-carousel-item>
+            />
 
             <v-carousel-item
               src="https://demos.creative-tim.com/vue-argon-dashboard-pro/img/img-1.9718dcd1.jpg"
               cover
-            ></v-carousel-item>
+            />
 
             <v-carousel-item
               src="https://demos.creative-tim.com/vue-argon-dashboard-pro/img/img-3.dfb45d4b.jpg"
               cover
-            ></v-carousel-item>
+            />
           </v-carousel>
         </v-card>
         <v-card-title> Top western road trips </v-card-title>
