@@ -1,1 +1,1 @@
-module.exports = { extends: ["git-commit-emoji"] };
+module.exports = { extends: ['gitmoji'] };
