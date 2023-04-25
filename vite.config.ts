@@ -40,6 +40,9 @@ export const viteConfig = ({ mode }: ConfigEnv): UserConfigExport => {
       },
       extensions: [".js", ".json", ".jsx", ".mjs", ".ts", ".tsx", ".vue"],
     },
+    optimizeDeps: {
+      include: ["vuetify"],
+    },
     css: {
       preprocessorOptions: {
         scss: {},
@@ -53,10 +56,10 @@ export const viteConfig = ({ mode }: ConfigEnv): UserConfigExport => {
       emptyOutDir: true,
       outDir: "vuetify-project",
       assetsDir: "./",
-      copyPublicDir: true,
-      reportCompressedSize: true,
+      // copyPublicDir: true,
+      // reportCompressedSize: true,
       chunkSizeWarningLimit: 500,
-      cssMinify: true,
+      // cssMinify: true,
       cssCodeSplit: true,
       rollupOptions: {
         output: {
