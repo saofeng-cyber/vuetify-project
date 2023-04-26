@@ -5,8 +5,8 @@ dependencies:
     specifier: ^7.2.96
     version: 7.2.96
   '@saofeng_cyber/pinia-sf-persistence-storage':
-    specifier: ^1.0.9
-    version: 1.0.9(pinia@2.0.35)
+    specifier: ^2.0.0
+    version: 2.0.0(pinia@2.0.35)
   '@vueuse/core':
     specifier: ^10.1.0
     version: 10.1.0(vue@3.2.47)
@@ -84,6 +84,9 @@ devDependencies:
   '@vitejs/plugin-vue':
     specifier: ^4.1.0
     version: 4.1.0(vite@4.3.1)(vue@3.2.47)
+  '@vue/eslint-config-prettier':
+    specifier: ^7.1.0
+    version: 7.1.0(eslint@8.39.0)(prettier@2.8.8)
   '@vue/eslint-config-typescript':
     specifier: ^11.0.2
     version: 11.0.2(eslint-plugin-vue@9.11.0)(eslint@8.39.0)(typescript@5.0.4)
@@ -707,8 +710,8 @@ packages:
       picomatch: 2.3.1
     dev: true
 
-  /@saofeng_cyber/pinia-sf-persistence-storage@1.0.9(pinia@2.0.35):
-    resolution: {integrity: sha512-lkPgVNIGa7AlkABnIMDiuehcblSSiqSN+93ZgPpcuY1/J1Ik00y4lRQ9pyZrhttmTKkukSBi1H9rB8NoXKsuWQ==}
+  /@saofeng_cyber/pinia-sf-persistence-storage@2.0.0(pinia@2.0.35):
+    resolution: {integrity: sha512-dhA1vXeH207hSXQv7UwEB+kUoszLwo9gVnK9kVCWTtmgSXyVWqien7apcmWoEzF/vS88FOuS28PCBRvyCSBUNQ==}
     peerDependencies:
       pinia: ^2.0.0
     dependencies:
@@ -986,6 +989,18 @@ packages:
 
   /@vue/devtools-api@6.5.0:
     resolution: {integrity: sha512-o9KfBeaBmCKl10usN4crU53fYtC1r7jJwdGKjPT24t348rHxgfpZ0xL3Xm/gLUYnc0oTp8LAmrxOeLyu6tbk2Q==}
+
+  /@vue/eslint-config-prettier@7.1.0(eslint@8.39.0)(prettier@2.8.8):
+    resolution: {integrity: sha512-Pv/lVr0bAzSIHLd9iz0KnvAr4GKyCEl+h52bc4e5yWuDVtLgFwycF7nrbWTAQAS+FU6q1geVd07lc6EWfJiWKQ==}
+    peerDependencies:
+      eslint: '>= 7.28.0'
+      prettier: '>= 2.0.0'
+    dependencies:
+      eslint: 8.39.0
+      eslint-config-prettier: 8.8.0(eslint@8.39.0)
+      eslint-plugin-prettier: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.39.0)(prettier@2.8.8)
+      prettier: 2.8.8
+    dev: true
 
   /@vue/eslint-config-typescript@11.0.2(eslint-plugin-vue@9.11.0)(eslint@8.39.0)(typescript@5.0.4):
     resolution: {integrity: sha512-EiKud1NqlWmSapBFkeSrE994qpKx7/27uCGnhdqzllYDpQZroyX/O6bwjEpeuyKamvLbsGdO6PMR2faIf+zFnw==}

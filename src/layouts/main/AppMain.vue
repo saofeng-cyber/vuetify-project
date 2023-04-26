@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Breadcrumb from './Breadcrumb.vue';
+import Breadcrumb from "./Breadcrumb.vue";
 </script>
 <template>
   <v-main scrollable>

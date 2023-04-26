@@ -22,7 +22,20 @@ const lineOptions = ref<ECOption>({
       type: "category",
       show: false,
       boundaryGap: false,
-      data: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
+      data: [
+        "一月",
+        "二月",
+        "三月",
+        "四月",
+        "五月",
+        "六月",
+        "七月",
+        "八月",
+        "九月",
+        "十月",
+        "十一月",
+        "十二月",
+      ],
     },
   ],
   yAxis: [
@@ -56,7 +69,9 @@ const lineOptions = ref<ECOption>({
           ],
         },
       },
-      data: [4623, 6145, 6268, 6411, 1890, 4251, 2978, 3880, 3606, 4311, 3456, 4256],
+      data: [
+        4623, 6145, 6268, 6411, 1890, 4251, 2978, 3880, 3606, 4311, 3456, 4256,
+      ],
     },
   ],
 });
@@ -64,9 +79,6 @@ useEcharts(linechart, lineOptions);
 </script>
 
 <template>
-  <div
-    ref="linechart"
-    class="w-100 h-100"
-  />
+  <div ref="linechart" class="w-100 h-100" />
 </template>
 <style scoped lang="scss"></style>

@@ -6,10 +6,7 @@ const { drawerOpen } = storeToRefs(useApp);
 console.log(routeListItem);
 </script>
 <template>
-  <v-navigation-drawer
-    v-model="drawerOpen"
-    elevation="2"
-  >
+  <v-navigation-drawer v-model="drawerOpen" elevation="2">
     <v-list class="sf-list">
       <v-list-item
         prepend-avatar="http://q1.qlogo.cn/g?b=qq&nk=942391953&s=640"
@@ -20,14 +17,8 @@ console.log(routeListItem);
 
     <v-divider />
 
-    <v-list
-      nav
-      color="primary"
-    >
-      <template
-        v-for="item in routeListItem"
-        ::key="item.title"
-      >
+    <v-list nav color="primary">
+      <template v-for="item in routeListItem" :key="item.title">
         <v-list-subheader>{{ item.title }}</v-list-subheader>
         <v-list-item
           nav
@@ -40,18 +31,11 @@ console.log(routeListItem);
       </template>
     </v-list>
     <template #append>
-      <v-card
-        theme="dark"
-        class="pa-3"
-        variant="text"
-      >
+      <v-card theme="dark" class="pa-3" variant="text">
         <v-card class="pa-2">
           <v-card-title>
             <v-btn icon>
-              <v-icon
-                icon="mdi-github"
-                size="36"
-              />
+              <v-icon icon="mdi-github" size="36" />
             </v-btn>
             <span class="text-h6 ml-2">Gang.S.M</span>
           </v-card-title>
@@ -60,12 +44,7 @@ console.log(routeListItem);
             <div>github.com/saofeng-cyber</div>
           </v-card-text>
           <v-card-actions>
-            <v-btn
-              block
-              prepend-icon="mdi-thumb-up-outline"
-            >
-              Star-Me
-            </v-btn>
+            <v-btn block prepend-icon="mdi-thumb-up-outline"> Star-Me </v-btn>
           </v-card-actions>
         </v-card>
       </v-card>

@@ -35,9 +35,9 @@ const openSetting = () => {
           class="overflow-y-auto pa-2"
           style="flex: 1"
         >
-          <template v-for="message in messages">
+          <template v-for="(item, index) in messages" :key="index">
             <div
-              v-if="message.role === 'user'"
+              v-if="item.role === 'user'"
               class="d-flex flex-row-reverse align-center pa-6"
             >
               <div class="d-flex align-center">
@@ -48,7 +48,7 @@ const openSetting = () => {
                   elevation="3"
                 >
                   <v-card-text>
-                    <b> {{ message.content }}</b>
+                    <b> {{ item.content }}</b>
                   </v-card-text>
                 </v-card>
                 <v-avatar
@@ -68,7 +68,7 @@ const openSetting = () => {
               />
               <v-card rounded="sm" elevation="3">
                 <v-card-text>
-                  <b> {{ message.content }}</b>
+                  <b> {{ item.content }}</b>
                 </v-card-text>
               </v-card>
             </div>

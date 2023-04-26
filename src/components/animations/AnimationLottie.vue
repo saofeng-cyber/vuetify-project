@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Vue3Lottie } from "vue3-lottie";
-import 'vue3-lottie/dist/style.css'
+import "vue3-lottie/dist/style.css";
 interface Prop {
   animationLink: string;
   height: number;
@@ -13,9 +13,5 @@ withDefaults(defineProps<Prop>(), {
 });
 </script>
 <template>
-  <Vue3Lottie
-    :animation-link="animationLink"
-    :height="height"
-    :width="width"
-  />
+  <Vue3Lottie :animation-link="animationLink" :height="height" :width="width" />
 </template>
