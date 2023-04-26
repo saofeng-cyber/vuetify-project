@@ -8,7 +8,7 @@
     "lint": "eslint . --fix --ignore-path .gitignore",
     "prepare": "husky install",
     "commit": "git cz",
-    "changelog": "conventional-changelog -i CHANGELOG.md -s -r 0"
+    "changelog": "conventional-changelog -i CHANGELOG.md -s -r 0 -u && git add CHANGELOG.md"
   },
   "dependencies": {
     "@mdi/font": "^7.2.96",
