@@ -1,6 +1,7 @@
-## Unreleased (2023-04-26)
+## <small>2.0.1 (2023-04-26)</small>
 
 * ✨ feat(custom): 对接封装chatgpt ai，基本完成界面对话 ([409987c](https://github.com/saofeng-cyber/vuetify-project/commit/409987c))
+* 🐛 fix(custom): 修改提示问题 ([241be8b](https://github.com/saofeng-cyber/vuetify-project/commit/241be8b))
 
 
 
