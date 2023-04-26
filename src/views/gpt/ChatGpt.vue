@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { MyOpenAi } from "@/api/openai";
-import { content } from "@/api/conten";
 import { openAppStore } from "@/store/open/openApp";
 import chatgptJson from "./animation/v1.json";
 const useAppStore = openAppStore();

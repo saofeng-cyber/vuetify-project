@@ -1,5 +1,6 @@
 ## Unreleased (2023-04-26)
 
+* ✨ feat(custom): 对接封装chatgpt ai，基本完成界面对话 ([409987c](https://github.com/saofeng-cyber/vuetify-project/commit/409987c))
 
 
 
