@@ -1,5 +1,6 @@
-## Unreleased (2023-04-27)
+## <small>2.0.2-0 (2023-04-27)</small>
 
+* ✨ feat(custom): 封装snackBar弹窗，可以看到不同的提示，拆分chatgpt组件，完善myOpenAi类 ([6744f8d](https://github.com/saofeng-cyber/vuetify-project/commit/6744f8d))
 
 
 
