@@ -15,6 +15,9 @@ export const openAppStore = defineStore("openApp", {
     saveOpenAiKey(apiKey: string) {
       this.apiKey = apiKey;
     },
+    saveOpenModel(openModel: string) {
+      this.openModel = openModel;
+    },
     clearOpenMessages() {
       CLEAN_APP_SETTING();
       this.messages = [];

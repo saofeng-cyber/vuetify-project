@@ -11,6 +11,7 @@
     "changelog": "conventional-changelog -i CHANGELOG.md -s -r 0 -u && git add CHANGELOG.md"
   },
   "dependencies": {
+    "@iconify/vue": "^4.1.1",
     "@mdi/font": "^7.2.96",
     "@saofeng_cyber/pinia-sf-persistence-storage": "^2.0.0",
     "@vueuse/core": "^10.1.0",
