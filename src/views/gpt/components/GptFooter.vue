@@ -5,11 +5,12 @@ import { snackBarStore } from "@/store/snackBar/snack";
 const useSnackBar = snackBarStore();
 const useAppStore = openAppStore();
 const apiKey = ref<string>(useAppStore.apiKey);
+const apiModel = ref<string>(useAppStore.openModel);
 const message = ref<string>("");
 const { messages } = storeToRefs(useAppStore);
 const dialog = ref<boolean>(false);
 const isSeePaw = ref<boolean>(false);
-const myOpenAi = new MyOpenAi(apiKey.value, "gpt-3.5-turbo");
+const myOpenAi = new MyOpenAi(apiKey.value, apiModel.value);
 /**
  * 通过emit定义一个方法控制父组件滚动条
  */
@@ -18,7 +19,8 @@ const emit = defineEmits<{
 }>();
 const saveOpenKey = () => {
   useAppStore.saveOpenAiKey(apiKey.value);
-  myOpenAi.resetMyOpenAi({ key: apiKey.value, mode: "gpt-3.5-turbo" });
+  useAppStore.saveOpenModel(apiModel.value);
+  myOpenAi.resetMyOpenAi({ key: apiKey.value, mode: apiModel.value });
   useSnackBar.showSucessMsg("保存成功");
   dialog.value = false;
 };
@@ -107,6 +109,19 @@ const sendMessage = async () => {
                 counter
                 @click:append="isSeePaw = !isSeePaw"
               ></v-text-field>
+              <v-divider class="my-4" />
+              <v-text-field
+                v-model="apiModel"
+                label="your open model"
+                variant="outlined"
+                hide-details
+              >
+                <template #prepend-inner>
+                  <v-icon size="36" class="mt-n1">
+                    <sf-icon class="v-icon--clickable" icon="ri:openai-fill" />
+                  </v-icon>
+                </template>
+              </v-text-field>
             </v-card-text>
             <v-card-actions>
               <v-spacer></v-spacer>
