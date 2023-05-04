@@ -1,8 +1,14 @@
+## Unreleased (2023-05-04)
+
+
+
+
 ## <small>2.0.2 (2023-05-04)</small>
 
 * ✨ feat(custom): 添加自定义弹窗，添加websocket测试，路由转换，模块glob加载,markdown支持 ([b165058](https://github.com/saofeng-cyber/vuetify-project/commit/b165058))
 * ✨ feat(custom): 添加apiModel自定义 ([12c882a](https://github.com/saofeng-cyber/vuetify-project/commit/12c882a))
 * 🐛 fix(custom): 去除未引用的报错 ([6899b05](https://github.com/saofeng-cyber/vuetify-project/commit/6899b05))
+* 2.0.2 ([a534e43](https://github.com/saofeng-cyber/vuetify-project/commit/a534e43))
 
 
 
