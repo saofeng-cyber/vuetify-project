@@ -1,23 +1,20 @@
 import DefaultVue from "@/layouts/default/Default.vue";
 import { RouterPage } from "@/config/routerPage";
-import { RouteRecordRaw } from "vue-router";
+import { RouteComponent, RouteRecordRaw } from "vue-router";
 
-const transformRouteKeyToPage = (key: RouterKey.RouterName) => {
+const transformRouteKeyToPage = (key: RouterKey.RouterName): RouteComponent => {
   return RouterPage[key];
 };
 
-function hasComponent(item: Router.RouterCustomRaw) {
+function hasComponent(item: Router.RouterCustomRaw): boolean {
   return Boolean(item.component);
 }
 
-function hasChildren(item: Router.RouterCustomRaw) {
+function hasChildren(item: Router.RouterCustomRaw): boolean {
   return Boolean(item.children && item.children.length);
 }
 
-export const generateRoute = (modules: Router.RouterCustomRaw[]) => {
-  return modules.map((item) => transformRouteRaw(item)).flat(1);
-};
-export const transformRouteRaw = (item: Router.RouterCustomRaw) => {
+const transformRouteRaw = (item: Router.RouterCustomRaw) => {
   const routeList: Array<RouteRecordRaw> = [];
   const itemRoute = { ...item } as RouteRecordRaw;
   if (hasComponent(item)) {
@@ -39,4 +36,8 @@ export const transformRouteRaw = (item: Router.RouterCustomRaw) => {
   }
   routeList.push(itemRoute);
   return routeList;
+};
+
+export const generateRoute = (modules: Router.RouterCustomRaw[]) => {
+  return modules.map((item) => transformRouteRaw(item)).flat(1);
 };

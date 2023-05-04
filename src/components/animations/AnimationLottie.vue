@@ -10,7 +10,7 @@ interface Prop {
 }
 withDefaults(defineProps<Prop>(), {
   animationLink: "",
-  animationData: "",
+  animationData: null,
   height: 200,
   width: 200,
 });

@@ -1,3 +1,3 @@
 declare namespace RouterKey {
-  type RouterName = "chatGpt" | "chatStream" | "workbench";
+  type RouterName = "chatGpt" | "chatStream" | "workbench" | "userInfo";
 }

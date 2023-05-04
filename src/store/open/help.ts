@@ -23,3 +23,6 @@ export const GET_APP_SETTING = (): OpenState => {
 export const CLEAN_APP_SETTING = () => {
   ss.removeItem(Open_KEY);
 };
+export const SAVE_APP_STATE = (state: OpenState) => {
+  ss.setItem(Open_KEY, state);
+};

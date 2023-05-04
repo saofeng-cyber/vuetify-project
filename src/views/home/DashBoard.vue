@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ScaleCard from "@/components/ScaleCard.vue";
+import ScaleCard from "./components/ScaleCard.vue";
 const items = ref([
   {
     prependAvatar: "https://cdn.vuetifyjs.com/images/lists/1.jpg",

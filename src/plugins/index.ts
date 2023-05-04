@@ -9,7 +9,6 @@ import { loadFonts } from "./webfontloader";
 import vuetify from "./vuetify";
 import pinia from "../store";
 import router from "../router";
-// import { myPiniaStoragePlugin } from "@/utils/piniaStoragePlugin";
 import { myPiniaStoragePlugin } from "@saofeng_cyber/pinia-sf-persistence-storage";
 import AnimationLottieVue from "@/components/animations/AnimationLottie.vue";
 import { Icon } from "@iconify/vue";

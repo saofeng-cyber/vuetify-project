@@ -3,6 +3,7 @@ import GptFooter from "./GptFooter.vue";
 import chatgptJson from "../animation/v1.json";
 import { openAppStore } from "@/store/open/openApp";
 import { snackBarStore } from "@/store/snackBar/snack";
+import MarkdownMsg from "./MarkdownMsg.vue";
 const useSnackBar = snackBarStore();
 const useAppStore = openAppStore();
 const { messages } = storeToRefs(useAppStore);
@@ -56,7 +57,7 @@ onMounted(() => {
         <template v-for="(item, index) in messages" :key="index">
           <div
             v-if="item.role === 'user'"
-            class="d-flex flex-row-reverse align-center pa-6"
+            class="d-flex flex-row-reverse align-center py-6 px-4"
           >
             <div class="d-flex align-center">
               <v-card
@@ -85,9 +86,14 @@ onMounted(() => {
               variant="elevated"
             />
             <v-card rounded="sm" elevation="3">
-              <v-card-text>
-                <b> {{ item.content }}</b>
-              </v-card-text>
+              <v-card-item>
+                <MarkdownMsg :content="item.content" />
+                <!-- <pre>
+                  <code
+                    v-html="transformMarkDown(item.content)"
+                    style="white-space: pre-wrap"></code>
+                </pre> -->
+              </v-card-item>
             </v-card>
           </div>
         </template>

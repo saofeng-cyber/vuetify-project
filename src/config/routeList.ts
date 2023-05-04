@@ -33,4 +33,14 @@ export const routeListItem: RouteList[] = [
       },
     ],
   },
+  {
+    title: "User",
+    children: [
+      {
+        title: "userInfo",
+        link: "/user/userInfo",
+        icon: "mdi-account",
+      },
+    ],
+  },
 ];

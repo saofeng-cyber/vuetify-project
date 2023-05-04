@@ -2,6 +2,15 @@
 import { MyOpenAi } from "@/api/openai";
 import { openAppStore } from "@/store/open/openApp";
 import { snackBarStore } from "@/store/snackBar/snack";
+import { WebSocketClient } from "@/utils/websocket/client";
+
+const wss = new WebSocketClient("ws://localhost:8080");
+wss.connect().then(() => {
+  wss.send({ type: "ping", name: "saofeng" });
+  wss.receive().then((data) => {
+    console.log(data);
+  });
+});
 const useSnackBar = snackBarStore();
 const useAppStore = openAppStore();
 const apiKey = ref<string>(useAppStore.apiKey);
@@ -39,11 +48,13 @@ const sendMessage = async () => {
   try {
     const data = await myOpenAi.myChatCompletion(messages.value);
     if (data) {
+      const content = data.choices[0].message!.content.replace(/\n/g, "<br>");
       messages.value.push({
-        content: data.choices[0].message!.content,
+        content: content,
         role: "assistant",
       });
     }
+    wss.send(data.choices[0].message);
     message.value = "";
     emit("updateLoading", false);
   } catch (error: any) {

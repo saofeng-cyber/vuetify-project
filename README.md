@@ -42,3 +42,5 @@ pnpm build
 ### Customize configuration
 
 See [Configuration Reference](https://vitejs.dev/config/).
+
+![Saofeng's GitHub stats](https://github-readme-stats.vercel.app/api?username=saofeng-cyber&show_icons=true&count_private=true&theme=radical))
