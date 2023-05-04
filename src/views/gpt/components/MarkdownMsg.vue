@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import "highlight.js/styles/base16/ir-black.css";
-import MarkdownIt from "markdown-it";
 import Markdown from "vue3-markdown-it";
 defineProps({
   content: {
