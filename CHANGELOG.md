@@ -1,5 +1,6 @@
-## Unreleased (2023-05-12)
+## <small>2.0.3 (2023-05-12)</small>
 
+* ✨ feat(custom): 添加路由配置，修改样式配置，修改eslint ([37896c4](https://github.com/saofeng-cyber/vuetify-project/commit/37896c4))
 * ✨ feat(custom): 添加自定义自述文件 ([513d812](https://github.com/saofeng-cyber/vuetify-project/commit/513d812))
 
 
