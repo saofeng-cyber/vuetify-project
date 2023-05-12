@@ -1,58 +1,59 @@
 <script setup lang="ts">
-import { type ECOption, useEcharts } from "../echart";
-const linechart = ref<HTMLDivElement | null>(null);
+import { type ECOption, useEcharts } from '../echart'
+
+const linechart = ref<HTMLDivElement | null>(null)
 const lineOptions = ref<ECOption>({
   tooltip: {
-    trigger: "axis",
-    backgroundColor: "rgb(0, 0, 0, 0.1)",
+    trigger: 'axis',
+    backgroundColor: 'rgb(0, 0, 0, 0.1)',
     borderWidth: 0,
     textStyle: {
-      color: "#fff",
+      color: '#fff',
     },
     borderRadius: 10,
   },
   grid: {
-    left: "0%",
-    right: "0%",
-    bottom: "0%",
-    top: "3%",
+    left: '0%',
+    right: '0%',
+    bottom: '0%',
+    top: '3%',
   },
   xAxis: [
     {
-      type: "category",
+      type: 'category',
       show: false,
       boundaryGap: false,
       data: [
-        "一月",
-        "二月",
-        "三月",
-        "四月",
-        "五月",
-        "六月",
-        "七月",
-        "八月",
-        "九月",
-        "十月",
-        "十一月",
-        "十二月",
+        '一月',
+        '二月',
+        '三月',
+        '四月',
+        '五月',
+        '六月',
+        '七月',
+        '八月',
+        '九月',
+        '十月',
+        '十一月',
+        '十二月',
       ],
     },
   ],
   yAxis: [
     {
-      type: "value",
+      type: 'value',
       show: false,
     },
   ],
   series: [
     {
-      color: "rgb(203,12,159)",
-      name: "下载量",
-      type: "line",
+      color: 'rgb(203,12,159)',
+      name: '下载量',
+      type: 'line',
       smooth: true,
       areaStyle: {
         color: {
-          type: "linear",
+          type: 'linear',
           x: 0,
           y: 0,
           x2: 0,
@@ -60,11 +61,11 @@ const lineOptions = ref<ECOption>({
           colorStops: [
             {
               offset: 0.25,
-              color: "rgb(203,12,159, 0.5)",
+              color: 'rgb(203,12,159, 0.5)',
             },
             {
               offset: 1,
-              color: "rgb(0,0,0,0.01)",
+              color: 'rgb(0,0,0,0.01)',
             },
           ],
         },
@@ -74,11 +75,12 @@ const lineOptions = ref<ECOption>({
       ],
     },
   ],
-});
-useEcharts(linechart, lineOptions);
+})
+useEcharts(linechart, lineOptions)
 </script>
 
 <template>
   <div ref="linechart" class="w-100 h-100" />
 </template>
+
 <style scoped lang="scss"></style>

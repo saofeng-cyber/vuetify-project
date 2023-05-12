@@ -1,31 +1,32 @@
 <script setup lang="ts">
 interface Message {
-  content: string;
-  role: "user" | "assistant";
-  userName: string;
+  content: string
+  role: 'user' | 'assistant'
+  userName: string
 }
-const message = ref<string>("");
-const messages = ref<Message[]>([]);
-const sendMessage = () => {
-  console.log("sendMessage", message.value);
+const message = ref<string>('')
+const messages = ref<Message[]>([])
+function sendMessage() {
+  console.log('sendMessage', message.value)
   messages.value.push(
     {
       content: message.value,
-      role: "user",
-      userName: "saofeng",
+      role: 'user',
+      userName: 'saofeng',
     },
     {
       content:
-        "I'm sorry, I do not understand what you are trying to communicate. Could you please provide more context or clarify your message?",
-      role: "assistant",
-      userName: "gpt",
-    }
-  );
-};
-const openSetting = () => {
-  console.log("openSetting");
-};
+        'I\'m sorry, I do not understand what you are trying to communicate. Could you please provide more context or clarify your message?',
+      role: 'assistant',
+      userName: 'gpt',
+    },
+  )
+}
+function openSetting() {
+  console.log('openSetting')
+}
 </script>
+
 <template>
   <div style="height: calc(100vh - 160px)">
     <v-card height="100%" rounded="lg" class="pa-3">
@@ -99,7 +100,6 @@ const openSetting = () => {
         <v-card-actions>
           <v-sheet elevation="0" width="100%" class="my-2">
             <v-text-field
-              ref="input"
               v-model="message"
               variant="solo"
               active
@@ -109,10 +109,14 @@ const openSetting = () => {
               @keyup.enter="sendMessage"
             >
               <template #append-inner>
-                <v-icon @click="sendMessage"> mdi-send </v-icon>
+                <v-icon @click="sendMessage">
+                  mdi-send
+                </v-icon>
               </template>
               <template #append>
-                <v-icon size="32" @click="openSetting"> mdi-cogs </v-icon>
+                <v-icon size="32" @click="openSetting">
+                  mdi-cogs
+                </v-icon>
               </template>
             </v-text-field>
           </v-sheet>

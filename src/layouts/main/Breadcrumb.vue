@@ -1,11 +1,10 @@
 <script setup lang="ts">
-const route = useRoute();
-const breadcrumbs = ref<any>([]);
+const route = useRoute()
+const breadcrumbs = ref<any>([])
 watch(
   () => route.path,
   () => {
-    console.log(route.matched);
-    const matched = route.matched;
+    const matched = route.matched
     breadcrumbs.value = [
       {
         title: matched[0].meta?.title,
@@ -17,14 +16,15 @@ watch(
         disable: true,
         // href: matched[1].path,
       },
-    ];
+    ]
   },
   {
     immediate: true,
     deep: true,
-  }
-);
+  },
+)
 </script>
+
 <template>
   <v-breadcrumbs :items="breadcrumbs" divider="/" />
 </template>

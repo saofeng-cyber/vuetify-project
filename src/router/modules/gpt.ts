@@ -1,30 +1,30 @@
 const gpt: Router.RouterCustomRaw = {
-  path: "/gpt",
-  name: "gpt",
-  component: "basic",
-  redirect: "/gpt/chatGpt",
+  path: '/gpt',
+  name: 'gpt',
+  component: 'basic',
+  redirect: '/gpt/chatGpt',
   meta: {
-    title: "ChatAi",
+    title: 'ChatAi',
   },
   children: [
     {
-      path: "chatGpt",
-      name: "chatGpt",
-      component: "self",
+      path: 'chatGpt',
+      name: 'chatGpt',
+      component: 'self',
       meta: {
-        title: "chatGpt v1",
-        icon: "mdi-robot-angry-outline",
+        title: 'chatGpt v1',
+        icon: 'mdi-robot-angry-outline',
       },
     },
     {
-      path: "chatStream",
-      name: "chatStream",
-      component: "self",
+      path: 'chatStream',
+      name: 'chatStream',
+      component: 'self',
       meta: {
-        title: "chatStream v2",
-        icon: "mdi-robot-angry",
+        title: 'chatStream v2',
+        icon: 'mdi-robot-angry',
       },
     },
   ],
-};
-export default gpt;
+}
+export default gpt

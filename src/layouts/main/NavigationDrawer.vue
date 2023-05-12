@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import { routeListItem } from "@/config/routeList";
-import { appStore } from "@/store/app/app";
-const useApp = appStore();
-const { drawerOpen } = storeToRefs(useApp);
-console.log(routeListItem);
+import { routeListItem } from '@/config/routeList'
+import { appStore } from '@/store/app/app'
+
+const useApp = appStore()
+const { drawerOpen } = storeToRefs(useApp)
 </script>
+
 <template>
   <v-navigation-drawer v-model="drawerOpen" elevation="2">
     <v-list class="sf-list">
@@ -21,9 +22,9 @@ console.log(routeListItem);
       <template v-for="item in routeListItem" :key="item.title">
         <v-list-subheader>{{ item.title }}</v-list-subheader>
         <v-list-item
-          nav
           v-for="child in item.children"
           :key="child.link"
+          nav
           :to="child.link"
           :prepend-icon="child.icon"
           :title="child.title"
@@ -44,13 +45,16 @@ console.log(routeListItem);
             <div>github.com/saofeng-cyber</div>
           </v-card-text>
           <v-card-actions>
-            <v-btn block prepend-icon="mdi-thumb-up-outline"> Star-Me </v-btn>
+            <v-btn block prepend-icon="mdi-thumb-up-outline">
+              Star-Me
+            </v-btn>
           </v-card-actions>
         </v-card>
       </v-card>
     </template>
   </v-navigation-drawer>
 </template>
+
 <style scoped lang="scss">
 .v-list-item--active {
   border-radius: 0;

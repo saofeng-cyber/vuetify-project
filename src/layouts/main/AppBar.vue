@@ -1,14 +1,16 @@
 <script setup lang="ts">
-import { appStore } from "@/store/app/app";
-const useApp = appStore();
-const theme = computed(() => useApp.theme === "light");
-const changeDrawer = () => {
-  useApp.toggleDrawer();
-};
-const toggleTheme = () => {
-  useApp.changeTheme();
-};
+import { appStore } from '@/store/app/app'
+
+const useApp = appStore()
+const theme = computed(() => useApp.theme === 'light')
+function changeDrawer() {
+  useApp.toggleDrawer()
+}
+function toggleTheme() {
+  useApp.changeTheme()
+}
 </script>
+
 <template>
   <v-app-bar order="0">
     <v-app-bar-nav-icon variant="text" @click.stop="changeDrawer" />

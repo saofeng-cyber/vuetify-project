@@ -1,10 +1,11 @@
-import axios from "axios";
+import axios from 'axios'
+
 const serve = axios.create({
-  baseURL: "/api",
-});
+  baseURL: '/api',
+})
 serve.interceptors.request.use((config) => {
-  return config;
-});
+  return config
+})
 serve.interceptors.response.use((response) => {
-  return response;
-});
+  return response
+})

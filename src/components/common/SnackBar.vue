@@ -1,13 +1,15 @@
 <script setup lang="ts">
-import { snackBarStore } from "@/store/snackBar/snack";
-const useSnackBar = snackBarStore();
-const { isShow, timeout, snackColor, snackLocation, msg } =
-  storeToRefs(useSnackBar);
+import { snackBarStore } from '@/store/snackBar/snack'
+
+const useSnackBar = snackBarStore()
+const { isShow, timeout, snackColor, snackLocation, msg }
+  = storeToRefs(useSnackBar)
 </script>
+
 <template>
   <v-snackbar
-    :color="snackColor"
     v-model="isShow"
+    :color="snackColor"
     :timeout="timeout"
     :location="snackLocation"
     rounded="lg"

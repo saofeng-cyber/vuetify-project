@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import Breadcrumb from "./Breadcrumb.vue";
+import Breadcrumb from './Breadcrumb.vue'
 </script>
+
 <template>
   <v-main scrollable>
     <v-container fluid>
@@ -16,4 +17,5 @@ import Breadcrumb from "./Breadcrumb.vue";
     </v-container>
   </v-main>
 </template>
+
 <style scoped lang="scss"></style>

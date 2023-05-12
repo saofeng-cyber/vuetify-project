@@ -1,9 +1,9 @@
-import type { RouteRecordRaw } from "vue-router";
+import type { RouteRecordRaw } from 'vue-router'
 
 export const baseRoute: RouteRecordRaw[] = [
   {
-    path: "/",
-    name: "home",
-    redirect: "/dashboard/workbench",
+    path: '/',
+    name: 'home',
+    redirect: '/dashboard/workbench',
   },
-];
+]

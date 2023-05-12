@@ -1,19 +1,20 @@
 <script setup lang="ts">
 const data = ref([
   {
-    key: "name",
-    value: "丢批犯",
+    key: 'name',
+    value: '丢批犯',
   },
   {
-    key: "age",
+    key: 'age',
     value: 24,
   },
   {
-    key: "from",
-    value: "数据平台",
+    key: 'from',
+    value: '数据平台',
   },
-]);
+])
 </script>
+
 <template>
   <v-card>
     <v-card-title>Users Info</v-card-title>
@@ -28,7 +29,9 @@ const data = ref([
           {{ item.value }}
         </v-banner-text>
         <v-banner-actions>
-          <v-btn variant="elevated">{{ item.key }}</v-btn>
+          <v-btn variant="elevated">
+            {{ item.key }}
+          </v-btn>
         </v-banner-actions>
       </v-banner>
     </v-card-text>

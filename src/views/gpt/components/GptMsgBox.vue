@@ -1,44 +1,45 @@
 <script setup lang="ts">
-import GptFooter from "./GptFooter.vue";
-import chatgptJson from "../animation/v1.json";
-import { openAppStore } from "@/store/open/openApp";
-import { snackBarStore } from "@/store/snackBar/snack";
-import MarkdownMsg from "./MarkdownMsg.vue";
-const useSnackBar = snackBarStore();
-const useAppStore = openAppStore();
-const { messages } = storeToRefs(useAppStore);
-const isLoading = ref<boolean>(false);
-const updateLoading = (loading: boolean) => {
-  console.log(666);
-  isLoading.value = loading;
-};
-const scrollToBottom = () => {
-  const container = document.querySelector(".message-container");
+import chatgptJson from '../animation/v1.json'
+import GptFooter from './GptFooter.vue'
+import MarkdownMsg from './MarkdownMsg.vue'
+import { openAppStore } from '@/store/open/openApp'
+import { snackBarStore } from '@/store/snackBar/snack'
+
+const useSnackBar = snackBarStore()
+const useAppStore = openAppStore()
+const { messages } = storeToRefs(useAppStore)
+const isLoading = ref<boolean>(false)
+function updateLoading(loading: boolean) {
+  console.log(666)
+  isLoading.value = loading
+}
+function scrollToBottom() {
+  const container = document.querySelector('.message-container')
   setTimeout(() => {
     container?.scrollTo({
       top: container?.scrollHeight,
-    });
-  }, 20);
-};
+    })
+  }, 20)
+}
 
 watch(
   () => messages.value,
   (val) => {
-    if (val) {
-      scrollToBottom();
-    }
-    if (val.length >= 30) {
-      useSnackBar.showInfoMsg("累计会话已达30次，建议您重新建立新的会话");
-    }
+    if (val)
+      scrollToBottom()
+
+    if (val.length >= 30)
+      useSnackBar.showInfoMsg('累计会话已达30次，建议您重新建立新的会话')
   },
   {
     deep: true,
-  }
-);
+  },
+)
 onMounted(() => {
-  scrollToBottom();
-});
+  scrollToBottom()
+})
 </script>
+
 <template>
   <v-card
     height="100%"

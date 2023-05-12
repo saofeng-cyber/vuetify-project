@@ -16,10 +16,10 @@
     "noEmit": true,
     "paths": {
       "@/*": [
-       "src/*"
+        "src/*"
       ]
-     },
-     "types": ["node", "vite/client"],
+    },
+    "types": ["node", "vite/client"]
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "custom/*.ts"],
   "references": [{ "path": "./tsconfig.node.json" }],

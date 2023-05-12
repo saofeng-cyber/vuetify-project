@@ -1,20 +1,22 @@
+import type {
+  ChatCompletionRequestMessage,
+  CreateChatCompletionResponse,
+} from 'openai'
 import {
   Configuration,
   OpenAIApi,
-  CreateChatCompletionResponse,
-  ChatCompletionRequestMessage,
-} from "openai";
+} from 'openai'
 
 interface OpenClass {
-  mode: string;
-  key: string;
+  mode: string
+  key: string
 }
 
 export class MyOpenAi implements OpenClass {
-  mode: string;
-  key: string;
-  configuration: Configuration;
-  myOpenAi: OpenAIApi;
+  mode: string
+  key: string
+  configuration: Configuration
+  myOpenAi: OpenAIApi
   /**
    * 创建一个openai模型
    * @param key
@@ -30,12 +32,12 @@ export class MyOpenAi implements OpenClass {
    */
 
   constructor(key: string, mode: string) {
-    this.key = key;
-    this.mode = mode;
+    this.key = key
+    this.mode = mode
     this.configuration = new Configuration({
       apiKey: key,
-    });
-    this.myOpenAi = new OpenAIApi(this.configuration);
+    })
+    this.myOpenAi = new OpenAIApi(this.configuration)
   }
 
   /**
@@ -64,13 +66,13 @@ export class MyOpenAi implements OpenClass {
    */
 
   async myChatCompletion(
-    chatCompletion: Array<ChatCompletionRequestMessage>
+    chatCompletion: Array<ChatCompletionRequestMessage>,
   ): Promise<CreateChatCompletionResponse> {
     const message = await this.myOpenAi.createChatCompletion({
       model: this.mode,
       messages: chatCompletion,
-    });
-    return message.data;
+    })
+    return message.data
   }
 
   /**
@@ -82,7 +84,7 @@ export class MyOpenAi implements OpenClass {
   resetMyOpenAi(options: OpenClass) {
     this.configuration = new Configuration({
       apiKey: options.key,
-    });
-    this.myOpenAi = new OpenAIApi(this.configuration);
+    })
+    this.myOpenAi = new OpenAIApi(this.configuration)
   }
 }

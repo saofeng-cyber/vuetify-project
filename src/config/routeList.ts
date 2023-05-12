@@ -1,46 +1,46 @@
 interface Children {
-  link: string;
-  title: string;
-  icon: string;
+  link: string
+  title: string
+  icon: string
 }
 interface RouteList {
-  title: string;
-  children?: Children[];
+  title: string
+  children?: Children[]
 }
 export const routeListItem: RouteList[] = [
   {
-    title: "DashBoard",
+    title: 'DashBoard',
     children: [
       {
-        title: "workbench",
-        link: "/dashboard/workbench",
-        icon: "mdi-view-dashboard-outline",
+        title: 'workbench',
+        link: '/dashboard/workbench',
+        icon: 'mdi-view-dashboard-outline',
       },
     ],
   },
   {
-    title: "ChatAi",
+    title: 'ChatAi',
     children: [
       {
-        link: "/gpt/chatGpt",
-        title: "chatGpt v1",
-        icon: "mdi-robot-angry-outline",
+        link: '/gpt/chatGpt',
+        title: 'chatGpt v1',
+        icon: 'mdi-robot-angry-outline',
       },
       {
-        link: "/gpt/chatStream",
-        title: "chatStream v2",
-        icon: "mdi-robot-angry",
+        link: '/gpt/chatStream',
+        title: 'chatStream v2',
+        icon: 'mdi-robot-angry',
       },
     ],
   },
   {
-    title: "User",
+    title: 'User',
     children: [
       {
-        title: "userInfo",
-        link: "/user/userInfo",
-        icon: "mdi-account",
+        title: 'userInfo',
+        link: '/user/userInfo',
+        icon: 'mdi-account',
       },
     ],
   },
-];
+]
